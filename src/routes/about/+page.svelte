@@ -1,10 +1,10 @@
 <script>
   import Navbar from "$lib/navbar.svelte";
 </script>
-<Navbar selectedPage="Index"/>
 
+<Navbar selectedPage="About"/>
 <h1 class="text-3xl font-bold">Adam Pruner</h1>
-<p>What do I put here?</p>
+<p>I guess this is the home page now!</p>
 
 <style lang="postcss">
   :global(html) {
