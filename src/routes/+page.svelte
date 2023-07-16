@@ -9,7 +9,6 @@
 	<section
 		class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
 	>
-		<video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none" />
 		<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
 			<h1
 				class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-teal-200 md:text-5xl lg:text-6xl"
