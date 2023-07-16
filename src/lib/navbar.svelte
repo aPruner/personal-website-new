@@ -1,7 +1,16 @@
 <script>
-	let pages = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
+	let pages = new Map(
+		Object.entries({
+			'/': 'Home',
+			'/about': 'About',
+			'/projects': 'Projects',
+			'/resume': 'Resume',
+			'/contact': 'Contact'
+		})
+	);
+
 	/** @type {string} */
-	export let selectedPage;
+	export let currentPagePath;
 	const commonPageStyles = 'rounded-md px-3 py-2 text-sm font-medium';
 	const mobileMenuPageStyles = 'block rounded-md px-3 py-2 text-base font-medium';
 	const pageClass = `text-gray-300 hover:bg-gray-700 hover:text-white ${commonPageStyles}`;
@@ -71,11 +80,11 @@
 			>
 				<div class="hidden sm:ml-6 sm:block">
 					<div class="flex space-x-4">
-						{#each pages as page}
+						{#each [...pages] as [path, name]}
 							<a
-								href={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
-								class={selectedPage === page ? currentPageClass : pageClass}
-								aria-current={selectedPage === page && 'page'}>{page}</a
+								href={path}
+								class={pages.get(currentPagePath) === name ? currentPageClass : pageClass}
+								aria-current={pages.get(currentPagePath) === name && 'page'}>{name}</a
 							>
 						{/each}
 					</div>
@@ -87,13 +96,13 @@
 	<!-- Mobile menu, show/hide based on menu state. -->
 	<div class="sm:hidden" id="mobile-menu" style={!isMobileMenuOpen ? 'display: none' : null}>
 		<div class="space-y-1 px-2 pb-3 pt-2">
-			{#each pages as page}
-				<a
-					href={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
-					class={selectedPage === page ? mobileMenuCurrentPageClass : mobileMenuPageClass}
-					aria-current={selectedPage === page && 'page'}>{page}</a
-				>
-			{/each}
+      {#each [...pages] as [path, name]}
+        <a
+          href={path}
+          class={pages.get(currentPagePath) === name ? mobileMenuCurrentPageClass: mobileMenuPageClass}
+          aria-current={pages.get(currentPagePath) === name && 'page'}>{name}</a
+        >
+      {/each}
 		</div>
 	</div>
 </nav>
