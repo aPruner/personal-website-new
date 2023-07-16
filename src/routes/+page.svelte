@@ -6,10 +6,8 @@
 <Navbar selectedPage="Home" />
 
 <div>
-	<section
-		class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
-	>
-		<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+	<section class="relative flex items-center justify-center min-h-screen overflow-hidden">
+		<div class="z-30 relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
 			<h1
 				class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-teal-200 md:text-5xl lg:text-6xl"
 			>
@@ -22,7 +20,7 @@
 			</p>
 			<a
 				href="/contact"
-				class="inline-flex justify-center items-center py-3 px-5 mr-2 text-base font-medium text-center text-white rounded-lg bg-teal-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+				class="inline-flex justify-center items-center py-3 px-5 mr-2 text-base font-medium text-center text-white rounded-lg bg-teal-600 hover:bg-cyan-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
 			>
 				Let's chat
 				<svg
@@ -42,7 +40,7 @@
 			</a>
 			<a
 				href="https://linkedin.com/in/adam-pruner"
-				class="inline-flex justify-center items-center py-3 px-5 mr-2 text-base font-medium text-center text-white rounded-lg bg-teal-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+				class="inline-flex justify-center items-center py-3 px-5 mr-2 text-base font-medium text-center text-white rounded-lg bg-teal-600 hover:bg-cyan-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
 			>
 				Let's connect
 				<svg
@@ -59,7 +57,11 @@
 				>
 			</a>
 		</div>
-	</section>
+	
+		<video autoplay loop muted class="z-10 absolute w-auto min-w-full min-h-full max-w-none">
+			<source src="https://imgur.com/rYft513.mp4" type="video/mp4" />
+		</video>
+</section>
 </div>
 
 <Footer />
