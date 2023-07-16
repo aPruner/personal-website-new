@@ -1,6 +1,6 @@
 <script>
   let pages = [
-    'Index', 'About', 'Projects', 'Resume', 'Links'
+    'Home', 'About', 'Projects', 'Resume', 'Contact'
   ];
   /** @type {string} */
   export let selectedPage;
@@ -17,8 +17,8 @@
     isMobileMenuOpen = !isMobileMenuOpen;
   }
 </script>
-<nav class="bg-gray-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+<nav class="bg-slate-800">
+  <div class="mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
@@ -43,7 +43,7 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             {#each pages as page}
-              <a href={page === 'Index' ? '/' : `/${page.toLowerCase()}`}
+              <a href={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
                 class={selectedPage === page ? currentPageClass : pageClass}
                 aria-current={selectedPage === page && "page"}>{page}</a>
             {/each}
@@ -57,7 +57,7 @@
   <div class="sm:hidden" id="mobile-menu" style={!isMobileMenuOpen ? "display: none": null}>
     <div class="space-y-1 px-2 pb-3 pt-2">
       {#each pages as page}
-      <a href={page === 'Index' ? '/' : `/${page.toLowerCase()}`}
+      <a href={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
         class={selectedPage === page ? mobileMenuCurrentPageClass : mobileMenuPageClass}
         aria-current={selectedPage === page && "page"}>{page}</a>
       {/each}
