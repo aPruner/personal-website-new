@@ -1,4 +1,6 @@
 <script>
+	import avatarImg from './images/me.png';
+
 	let pages = new Map(
 		Object.entries({
 			'/': 'Home',
@@ -67,11 +69,13 @@
 
 			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex flex-shrink-0 items-center">
-					<img
-						class="h-8 w-auto"
-						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-						alt="Adam Pruner"
-					/>
+					<a href="/">
+						<img
+							class="inline-block h-10 w-10 rounded-full ring-1 ring-cyan-300"
+							src={avatarImg}
+							alt="Adam Pruner"
+						/>
+					</a>
 				</div>
 			</div>
 
@@ -96,13 +100,15 @@
 	<!-- Mobile menu, show/hide based on menu state. -->
 	<div class="sm:hidden" id="mobile-menu" style={!isMobileMenuOpen ? 'display: none' : null}>
 		<div class="space-y-1 px-2 pb-3 pt-2">
-      {#each [...pages] as [path, name]}
-        <a
-          href={path}
-          class={pages.get(currentPagePath) === name ? mobileMenuCurrentPageClass: mobileMenuPageClass}
-          aria-current={pages.get(currentPagePath) === name && 'page'}>{name}</a
-        >
-      {/each}
+			{#each [...pages] as [path, name]}
+				<a
+					href={path}
+					class={pages.get(currentPagePath) === name
+						? mobileMenuCurrentPageClass
+						: mobileMenuPageClass}
+					aria-current={pages.get(currentPagePath) === name && 'page'}>{name}</a
+				>
+			{/each}
 		</div>
 	</div>
 </nav>
