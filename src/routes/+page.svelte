@@ -16,7 +16,7 @@
 			<p class="mb-4 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
 				I'm a software generalist who specializes in full stack web applications and likes to build
 				games for fun. I'm currently contributing my expertise to the growth engineering team at
-				<a href="https://coalitioninc.com" class="text-blue-500">Coalition</a>.
+				<a href="https://coalitioninc.com" class="text-blue-200">Coalition</a>.
 			</p>
 			<a
 				href="/contact"
@@ -59,7 +59,7 @@
 		</div>
 	
 		<video autoplay loop muted class="z-10 absolute w-auto min-w-full min-h-full max-w-none">
-			<source src="https://imgur.com/rYft513.mp4" type="video/mp4" />
+			<source src="https://imgur.com/ubXmpt8.mp4" type="video/mp4" />
 		</video>
 </section>
 </div>
