@@ -1,5 +1,6 @@
 <script>
 	import avatarImg from './images/me.png';
+	import resume from './assets/resume.pdf';
 
 	let pages = new Map(
 		Object.entries({
@@ -86,7 +87,8 @@
 					<div class="flex space-x-4">
 						{#each [...pages] as [path, name]}
 							<a
-								href={path}
+								target={path === '/resume' ? '_blank' : null}
+								href={path === '/resume' ? resume : path}
 								class={pages.get(currentPagePath) === name ? currentPageClass : pageClass}
 								aria-current={pages.get(currentPagePath) === name && 'page'}>{name}</a
 							>
